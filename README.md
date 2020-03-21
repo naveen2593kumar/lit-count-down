@@ -1,2 +1,2 @@
 # lit-count-down-timer
-This is an countdown timer web component best of LitElement Library
+This is a countdown timer web component based on LitElement Library
