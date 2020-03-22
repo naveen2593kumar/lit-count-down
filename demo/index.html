@@ -49,8 +49,13 @@
   <script type="module" src="../lit-count-down-timer.js"></script>
   <script>
     const timer = document.getElementById('timer');
-    timer.addEventListener('timer-completed', () => {
-      console.log('Timer Completed');
+
+    timer.addEventListener('count-down-completed', () => {
+      console.log('Countdown Completed');
+    });
+
+    timer.addEventListener('count-down-reset', () => {
+      console.log('Countdown Reset');
     });
 
     function start() {
