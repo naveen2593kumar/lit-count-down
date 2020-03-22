@@ -1,0 +1,23 @@
+{
+  "name": "lit-count-down-timer",
+  "version": "1.0.0",
+  "description": "This is a countdown timer web component based on LitElement Library",
+  "main": "lit-count-down-timer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naveen2593kumar/lit-count-down-timer.git"
+  },
+  "author": "Naveen Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naveen2593kumar/lit-count-down-timer/issues"
+  },
+  "homepage": "https://github.com/naveen2593kumar/lit-count-down-timer#readme",
+  "dependencies": {
+    "@webcomponents/shadycss": "^1.9.6",
+    "lit-element": "^2.3.1"
+  }
+}

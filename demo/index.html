@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lit Countdown Timer</title>
+  <script src="../node_modules/@webcomponents/shadycss/apply-shim.min.jss"></script>
+</head>
+
+<body>
+
+  Coutdown: <lit-count-down-timer id="timer"></lit-count-down-timer> <button onclick="addTime(5)">+5</button> <button
+    onclick="addTime(-5)">-5</button>
+  <hr />
+  <hr />
+  <button onclick="start()">Start</button>
+  <button onclick="pause()">Pause</button>
+  <button onclick="reset()">Reset</button>
+  <style>
+    lit-count-down-timer {
+      padding: 10px;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    lit-count-down-timer,
+    lit-count-down-timer[status='not_started'] {
+      color: red;
+      border: 1px solid red;
+    }
+
+    lit-count-down-timer[status='running'] {
+      color: blue;
+      border: 1px solid blue;
+    }
+
+    lit-count-down-timer[status='paused'] {
+      color: orange;
+      border: 1px solid orange;
+    }
+
+    lit-count-down-timer[status='completed'] {
+      color: green;
+      border: 1px solid green;
+    }
+  </style>
+
+  <script type="module" src="../lit-count-down-timer.js"></script>
+  <script>
+    const timer = document.getElementById('timer');
+    timer.addEventListener('timer-completed', () => {
+      console.log('Timer Completed');
+    });
+
+    function start() {
+      timer.start();
+    }
+
+    function pause() {
+      timer.pause();
+    }
+
+    function reset() {
+      timer.reset();
+    }
+
+    function addTime(time) {
+      timer.addTime(time);
+    }
+  </script>
+</body>
+
+</html>
